@@ -519,7 +519,7 @@ def run_align_video_with_filterPose_translate_smooth(args):
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--detect_resolution', type=int, default=512, help='detect_resolution')
+    parser.add_argument('--detect_resolution', type=int, default=576, help='detect_resolution')
     parser.add_argument('--image_resolution', type=int, default=720, help='image_resolution')
 
     parser.add_argument("--yolox_config",  type=str, default="./pose/config/yolox_l_8xb8-300e_coco.py")
@@ -530,7 +530,7 @@ def main():
 
     parser.add_argument('--align_frame', type=int, default=0, help='the frame index of the video to align')
     parser.add_argument('--max_frame', type=int, default=300, help='maximum frame number of the video to align')
-    parser.add_argument('--imgfn_refer', type=str, default="./assets/images/0.jpg", help='refer image path')
+    parser.add_argument('--imgfn_refer', type=str, default="/content/me2.jpg", help='refer image path')
     parser.add_argument('--vidfn', type=str, default="./assets/videos/0.mp4", help='Input video path')
     parser.add_argument('--outfn_align_pose_video', type=str, default=None, help='output path of the aligned video of the refer img')
     parser.add_argument('--outfn', type=str, default=None, help='Output path of the alignment visualization')
