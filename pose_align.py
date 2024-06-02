@@ -474,7 +474,7 @@ def run_align_video_with_filterPose_translate_smooth(args):
 
 
     # concatenate and paint results
-    H = 768 # paint height
+    H = 512 # paint height//used to be 768
     W1 = int((H/ref_H * ref_W)//2 *2)
     W2 = int((H/height * width)//2 *2)
     result_demo = [] # = Writer(args, None, H, 3*W1+2*W2, outfn, fps)
